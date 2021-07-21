@@ -21,7 +21,7 @@ dev:
 	docker run \
 		--restart unless-stopped \
 		--name $(CONTAINER_NAME) \
-		--volume=$(PWD)/src:$(BUILD_DIR) \
+		--volume=$(PWD)/source:$(BUILD_DIR) \
 		-d \
 		$(IMAGE_NAME)
 

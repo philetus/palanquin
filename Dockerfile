@@ -9,6 +9,7 @@ ENV TZ=Etc/UTC
 RUN apt-get update
 RUN apt-get install -y \
   binutils-arm-none-eabi \
+  build-essential \
   curl \
   gcc-arm-none-eabi \
   gdb-multiarch \
@@ -26,6 +27,6 @@ ENV BUILD_DIR=/build
 RUN mkdir -p $BUILD_DIR
 WORKDIR $BUILD_DIR
 
-COPY . .
+COPY source/ .
 
 CMD ["tail", "-f", "/dev/null"]
